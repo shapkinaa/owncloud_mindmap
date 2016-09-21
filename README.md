@@ -1,4 +1,4 @@
-MindMap is a Mindmap application for ownCloud 7x. 
+MindMap is a Mindmap application for ownCloud. 
 The application is based on the orginal mindmaps application created by David Richard (AGPL License).
 
 Included in this package.
