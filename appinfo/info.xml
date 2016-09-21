@@ -2,10 +2,10 @@
 <info>
 	<id>mindmap</id>
 	<name>Mindmap</name>
-	<description>MindMap is a mindmap application for ownCloud 7x. The application is based on the mindmap application created by David Richard (AGPL License)</description>
+	<description>MindMap is a mindmap application for ownCloud. The application is based on the plugin created by Erwin Koekoek</description>
 	<licence>AGPL</licence>
 	<require>7.00</require>
-	<author>Erwin Koekoek</author>
+	<author>Andrey Shapkin</author>
         <types>
                 <filesystem/>
         </types>
