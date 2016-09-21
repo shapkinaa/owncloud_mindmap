@@ -1,8 +1,8 @@
 <?php
 $quickStartFolder="/Mindmap";
 $quickStartFilename="Mindmap";
-$language="auto"; //Set to "en_GB" to enforce English. Check l10n folder for available languages
-
+// $language="auto"; //Set to "en_GB" to enforce English. Check l10n folder for available languages
+$language="en_GB"; //Set to "en_GB" to enforce English. Check l10n folder for available languages
 
 //BELOW THIS LINE NO VAR CHANGES!!
 //--------------------------------
@@ -38,14 +38,19 @@ if (isset($_REQUEST['action']) && isset($_REQUEST['filename']) && isset($_REQUES
  $filename=$_REQUEST['filename'];
  $filepath=$dir."/".$filename;
  //read json file
- if ($_REQUEST['action']=="readjson") {
-  if (\OC\Files\Filesystem::file_exists($filepath)==1){
+ if ($_REQUEST['action'] == "readjson") {
+  if (\OC\Files\Filesystem::file_exists($filepath) == 1) {
    echo \OC\Files\Filesystem::file_get_contents($filepath);
   }
  }
  //save json file
- if ($_REQUEST['action']=="savejson") {
-  if (readonly($dir,$filename)==0) {\OC\Files\Filesystem::file_put_contents($filepath,$_REQUEST['data']);}else{exit("Cannot save file");}
+ if ($_REQUEST['action'] == "savejson") {
+  if (readonly($dir,$filename) == 0) {
+   \OC\Files\Filesystem::file_put_contents($filepath,$_REQUEST['data']);
+  }
+  else {
+   exit("Cannot save file");
+  }
  }
  //save png file
  if ($_REQUEST['action']=="savepng") {
